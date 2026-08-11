@@ -1,4 +1,4 @@
-const ROOT=document.documentElement.dataset.apiBase.replace(/\/$/,'');const API=location.hostname==='bay-trends.replit.app'?'':ROOT;
+const ROOT=document.documentElement.dataset.apiBase.replace(/\/$/,'');const API=location.hostname==='bay-trends.replit.app'?'':'/api/market';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];let current=null,currentQuery='',toastTimer;
 let watch=JSON.parse(localStorage.getItem('collecti-watchlist')||'[]'),compare=JSON.parse(localStorage.getItem('collecti-compare')||'[]');
 const esc=s=>{const d=document.createElement('div');d.textContent=s??'';return d.innerHTML};const money=n=>Number.isFinite(Number(n))?Number(n).toLocaleString('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}):'—';

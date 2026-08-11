@@ -1,5 +1,5 @@
 const ROOT=document.documentElement.dataset.apiBase.replace(/\/$/,'');
-const API=location.hostname==='collecti-agent.replit.app'?'':ROOT;
+const API=location.hostname==='collecti-agent.replit.app'?'':'/api/agent';
 const state={searches:[],stats:{},created:null};
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 let toastTimer;
